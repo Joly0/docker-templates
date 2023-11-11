@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ollama-webui</Name>
+  <Repository>ollamawebui/ollama-webui:latest</Repository>
+  <Registry>https://hub.docker.com/r/ollamawebui/ollama-webui</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ollama-webui/ollama-webui/issues</Support>
+  <Project>https://github.com/ollama-webui/ollama-webui</Project>
+  <Overview>ChatGPT-Style Web Interface for Ollama&#xD;
+&#xD;
+IMPORTANT: Make sure to add the following environment variable to your ollama container&#xD;
+- OLLAMA_ORIGINS=*</Overview>
+  <Category>Tools: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/jmorganca/ollama/assets/3325447/56ea1849-1284-4645-8970-956de6e51c3c</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1699676176</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="8080" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="OLLAMA_API_BASE_URL" Target="OLLAMA_API_BASE_URL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">http://OLLAMA-IP:11434</Config>
+</Container>

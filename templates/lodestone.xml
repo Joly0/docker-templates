@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Lodestone</Name>
+  <Repository>ghcr.io/lodestone-team/lodestone_core</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Lodestone-Team/lodestone/issues</Support>
+  <Project>https://github.com/Lodestone-Team/lodestone</Project>
+  <Overview>A free, open source server hosting tool for Minecraft and other multiplayers</Overview>
+  <Category>Cloud: GameServers: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:16662]</WebUI>
+  <TemplateURL/>
+  <Icon>https://avatars.githubusercontent.com/u/103068166?s=48&amp;amp;v=4</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1699953400</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="service" Target="16662" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">16662</Config>
+  <Config Name="lodestone" Target="/home/user/.lodestone" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/lodestone</Config>
+</Container>

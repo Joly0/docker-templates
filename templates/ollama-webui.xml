@@ -15,12 +15,11 @@ IMPORTANT: Make sure to add the following environment variable to your ollama co
 - OLLAMA_ORIGINS=*</Overview>
   <Category>Tools: Network:Web</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/ollama-webui.xml</TemplateURL>
   <Icon>https://github.com/jmorganca/ollama/assets/3325447/56ea1849-1284-4645-8970-956de6e51c3c</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1699676176</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires>ollama</Requires>

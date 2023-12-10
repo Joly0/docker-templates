@@ -12,12 +12,11 @@
   <Overview>Chatbot Ollama is an open source chat UI for Ollama</Overview>
   <Category>Tools: Network:Web</Category>
   <WebUI>http://[IP][PORT:3000]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/chatbot-ollama.xml</TemplateURL>
   <Icon>https://github.com/ivanfioravanti/chatbot-ollama/blob/main/public/favicon.png?raw=true</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1699743060</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>

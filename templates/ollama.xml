@@ -12,7 +12,7 @@
   <Overview>The easiest way to get up and running with large language models locally.</Overview>
   <Category>Other:</Category>
   <WebUI>http://[IP]:[PORT:11434]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/m0ngr31/unraid_ca/master/ollama.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/ollama.xml</TemplateURL>
   <Icon>https://ollama.ai/public/ollama.png</Icon>
   <ExtraParams>--runtime=nvidia</ExtraParams>
   <PostArgs/>

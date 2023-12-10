@@ -12,12 +12,11 @@
   <Overview>A free, open source server hosting tool for Minecraft and other multiplayers</Overview>
   <Category>Cloud: GameServers: Network:Web</Category>
   <WebUI>http://[IP]:[PORT:16662]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/lodestone.xml</TemplateURL>
   <Icon>https://avatars.githubusercontent.com/u/103068166?s=48&amp;amp;v=4</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1699953400</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>

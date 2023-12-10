@@ -23,7 +23,7 @@ IMPORTANT: Make sure to add the following environment variable to your ollama co
   <DateInstalled>1699676176</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Requires/>
+  <Requires>ollama</Requires>
   <Config Name="WebUI" Target="8080" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
   <Config Name="OLLAMA_API_BASE_URL" Target="OLLAMA_API_BASE_URL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">http://OLLAMA-IP:11434</Config>
 </Container>

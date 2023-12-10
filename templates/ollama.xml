@@ -19,7 +19,7 @@
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Requires/>
+  <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
   <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
   <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
   <Config Name="Config" Target="/root/.ollama" Default="/mnt/user/appdata/ollama" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ollama</Config>

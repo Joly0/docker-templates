@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>dokemon</Name>
+  <Repository>productiveops/dokemon:latest</Repository>
+  <Registry>https://hub.docker.com/r/productiveops/dokemon</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/productiveops/dokemon/issues</Support>
+  <Project>https://dokemon.dev/</Project>
+  <Overview>Dok&#xE9;mon is a friendly GUI for managing Docker Containers. You can manage multiple servers from a single Dokemon instance.</Overview>
+  <Category>Productivity: Tools: Network:Web Network:Management</Category>
+  <WebUI>http://[IP]:[PORT:9090]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/dokemon.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/productiveops/dokemon/main/web/public/assets/images/favicon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="9090" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">9090</Config>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/dokemon</Config>
+  <Config Name="Docker socket" Target="/var/run/docker.sock" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="DOCKER_API_VERSION" Target="DOCKER_API_VERSION" Default="" Mode="" Description="Temporary workaround to run dokemon on unraid. Is probably not reqiured when updating to unraid 6.13" Type="Variable" Display="always" Required="false" Mask="false">1.41</Config>
+</Container>

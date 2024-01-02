@@ -13,7 +13,7 @@
   <Category>Productivity: Tools: Network:Web Network:Management</Category>
   <WebUI>http://[IP]:[PORT:9090]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/dokemon.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/productiveops/dokemon/main/web/public/assets/images/favicon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/Joly0/docker-templates/main/icons/dokemon-server-icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

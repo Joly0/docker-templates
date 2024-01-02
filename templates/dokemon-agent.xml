@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>dokemon-agent</Name>
+  <Repository>productiveops/dokemon-agent:latest</Repository>
+  <Registry>https://hub.docker.com/r/productiveops/dokemon-agent</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/productiveops/dokemon/issues</Support>
+  <Project>https://dokemon.dev/</Project>
+  <Overview>Dok&#xE9;mon-Agent to connect to a Dok&#xE9;mon-Server to manage multiple docker servers from a single webui</Overview>
+  <Category>Productivity: Tools: Network:Web Network:Management</Category>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/dokemon-agent.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Joly0/docker-templates/main/icons/dokemon-agent-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Dokemon Server</Requires>
+  <Config Name="Docker socket" Target="/var/run/docker.sock" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="SERVER URL" Target="SERVER_URL" Default="" Mode="" Description="This is the Server URL that needs to be configured first in your main dokemon instance" Type="Variable" Display="always" Required="false" Mask="false">https://YOUR_IP:9090</Config>
+  <Config Name="TOKEN" Target="TOKEN" Default="" Mode="" Description="Dokemon token that shows, when you register a new node" Type="Variable" Display="always" Required="false" Mask="false">as56d4fa8sd54A54ASDF5648sdf456asd==</Config>
+</Container>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>ollama-webui</Name>
-  <Repository>ollamawebui/ollama-webui:latest</Repository>
-  <Registry>https://hub.docker.com/r/ollamawebui/ollama-webui</Registry>
+  <Repository>ghcr.io/ollama-webui/ollama-webui:main</Repository>
+  <Registry>https://github.com/ollama-webui/ollama-webui/pkgs/container/ollama-webui</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>

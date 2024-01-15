@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>WindowsinDocker</Name>
+  <Repository>dockurr/windows</Repository>
+  <Registry/>
+  <Network>eth0</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/dockur/windows/issues</Support>
+  <Project>https://github.com/dockur/windows</Project>
+  <Overview>Windows in a docker container.&#xD;
+IMPORTANT: Read the readme and especially the FAQ on the github page</Overview>
+  <Category>Other: Network:Web Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:8006]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/windowsindocker.xml</TemplateURL>
+  <Icon>https://github.com/dockur/windows/raw/master/.github/logo.png</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN --stop-timeout=120</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Version" Target="VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">win11x64</Config>
+  <Config Name="KVM" Target="" Default="" Mode="" Description="" Type="Device" Display="always" Required="false" Mask="false">/dev/kvm</Config>
+  <Config Name="WebUI" Target="8006" Default="8006" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8006</Config>
+  <Config Name="CPU Cores" Target="CPU_CORES" Default="2" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+  <Config Name="RAM Size" Target="RAM_SIZE" Default="4G" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">4G</Config>
+  <Config Name="DISK Size" Target="DISK_SIZE" Default="64G" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">64G</Config>
+  <Config Name="Storage" Target="/storage" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/WindowsinDocker/</Config>
+</Container>

@@ -12,7 +12,10 @@
   <Overview>ChatGPT-Style Web Interface for Ollama&#xD;
 &#xD;
 IMPORTANT: Make sure to add the following environment variable to your ollama container&#xD;
-- OLLAMA_ORIGINS=*</Overview>
+- OLLAMA_ORIGINS=*&#xD;
+  &#xD;
+Set your OpenAI API key (not persistant)&#xD;
+- OPENAI_API_KEY</Overview>
   <Category>Tools: Network:Web</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/ollama-webui.xml</TemplateURL>
@@ -26,4 +29,5 @@ IMPORTANT: Make sure to add the following environment variable to your ollama co
   <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="OLLAMA_API_BASE_URL" Target="OLLAMA_API_BASE_URL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">http://OLLAMA-IP:11434/api</Config>
   <Config Name="Data" Target="/app/backend/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ollama-webui</Config>
+  <Config Name="OPENAI_API_KEY" Target="" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">OPENAI_API_KEY</Config>
 </Container>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NPMplus</Name>
+  <Repository>zoeyvid/npmplus</Repository>
+  <Registry>https://hub.docker.com/r/zoeyvid/npmplus</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ZoeyVid/NPMplus/issues</Support>
+  <Project>https://github.com/ZoeyVid/NPMplus</Project>
+  <Overview>NPMplus is a fork of NPM (Nginx-Proxy-Manager) with many useful features like support for http/3 (Quic), Crowdsec or Modsecurity. &#xD;
+You can read about all the features here https://github.com/ZoeyVid/NPMplus#list-of-new-features&#xD;
+&#xD;
+You can migrate from NPM to NPMplus. Read how in the "Read Me First" section in this template or here on the project page https://github.com/ZoeyVid/NPMplus#migration&#xD;
+&#xD;
+ATTENTION: You can migrate from NPM to NPMplus, BUT you can&#xB4;t migrate back. SO BACKUP YOUR NPM DATA! You have been warned.&#xD;
+&#xD;
+You can read more about the variables and ports you can use for this image here https://github.com/ZoeyVid/NPMplus/blob/develop/compose.yaml</Overview>
+  <Category/>
+  <WebUI>https://[IP]:[PORT:81]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/npmplus.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ZoeyVid/NPMplus/develop/frontend/app-images/logo-text-vertical-grey.png</Icon>
+  <ExtraParams>--memory=1G --no-healthcheck</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Data" Target="/data" Default="/mnt/cache/appdata/npmplus/data/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/npmplus/data/</Config>
+  <Config Name="Certificates" Target="/etc/letsencrypt" Default="/mnt/cache/appdata/npmplus/letsencrypt/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/npmplus/letsencrypt/</Config>
+  <Config Name="WebUI" Target="81" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">81</Config>
+  <Config Name="HTTP Port" Target="80" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="HTTPS Port (TCP)" Target="443" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">443</Config>
+  <Config Name="HTTPS Port (UDP)" Target="443" Default="" Mode="udp" Description="HTTP/3 (QUIC) also needs the HTTPS port for UDP" Type="Port" Display="always" Required="false" Mask="false">443</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Europe/Berlin</Config>
+  <Config Name="Enable Goaccess" Target="GOA" Default="false" Mode="" Description="If you want to use Goaccess instead of logrotate, you can set this to true instead of false and access the goaccess dashboard under https://ip:91" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="WebServer" Target="/var/www" Default="/mnt/cache/appdata/npmplus/www" Mode="rw" Description="Optional, if you want to use it as webserver for html/php" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/cache/appdata/npmplus/www</Config>
+  <Config Name="Goaccess" Target="91" Default="" Mode="tcp" Description="Webui Port for Goaccess" Type="Port" Display="advanced" Required="false" Mask="false">91</Config>
+</Container>

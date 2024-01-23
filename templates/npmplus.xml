@@ -21,7 +21,7 @@ You can read more about the variables and ports you can use for this image here 
   <WebUI>https://[IP]:[PORT:81]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/npmplus.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ZoeyVid/NPMplus/develop/frontend/app-images/logo-text-vertical-grey.png</Icon>
-  <ExtraParams></ExtraParams>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DonateText/>

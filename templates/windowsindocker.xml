@@ -21,7 +21,7 @@ IMPORTANT: Read the readme and especially the FAQ on the github page</Overview>
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="Version" Target="VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">win11x64</Config>
+  <Config Name="Version" Target="VERSION" Default="" Mode="" Description="https://github.com/dockur/windows?tab=readme-ov-file#how-do-i-select-the-windows-version" Type="Variable" Display="always" Required="false" Mask="false">win11</Config>
   <Config Name="KVM" Target="" Default="" Mode="" Description="" Type="Device" Display="always" Required="false" Mask="false">/dev/kvm</Config>
   <Config Name="WebUI" Target="8006" Default="8006" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8006</Config>
   <Config Name="RDP" Target="3389" Default="3389" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3389</Config>

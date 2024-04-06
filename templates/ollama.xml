@@ -14,14 +14,12 @@
   <WebUI>http://[IP]:[PORT:11434]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/ollama.xml</TemplateURL>
   <Icon>https://ollama.ai/public/ollama.png</Icon>
-  <ExtraParams>--runtime=nvidia</ExtraParams>
+  <ExtraParams>--gpus=all</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DonateText/>
   <DonateLink/>
   <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
-  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
-  <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
   <Config Name="Config" Target="/root/.ollama" Default="/mnt/user/appdata/ollama" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ollama</Config>
   <Config Name="Web Interface" Target="11434" Default="11434" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">11434</Config>
   <Config Name="OLLAMA_ORIGINS" Target="OLLAMA_ORIGINS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">*</Config>

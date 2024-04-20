@@ -17,7 +17,7 @@ IMPORTANT: Make sure to add the following environment variable to your ollama co
   &#xD;
 Set your OpenAI API key (not persistant)&#xD;
 - OPENAI_API_KEY</Overview>
-  <Category>Tools: Network:Web</Category>
+  <Category>AI: Tools: Network:Web</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/open-webui.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/open-webui/open-webui/main/static/favicon.png</Icon>

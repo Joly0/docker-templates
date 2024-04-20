@@ -17,7 +17,7 @@ You can migrate from NPM to NPMplus. Read how in the "Read Me First" section in 
 ATTENTION: You can migrate from NPM to NPMplus, BUT you can&#xB4;t migrate back. SO BACKUP YOUR NPM DATA! You have been warned.&#xD;
 &#xD;
 You can read more about the variables and ports you can use for this image here https://github.com/ZoeyVid/NPMplus/blob/develop/compose.yaml</Overview>
-  <Category/>
+  <Category>Network:Web: Network:Proxy: Tools:Utilities</Category>
   <WebUI>https://[IP]:[PORT:81]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/npmplus.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ZoeyVid/NPMplus/develop/frontend/app-images/logo-text-vertical-grey.png</Icon>

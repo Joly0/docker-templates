@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>ollama-webui</Name>
-  <Repository>ghcr.io/ollama-webui/ollama-webui:main</Repository>
-  <Registry>https://hub.docker.com/r/ollamawebui/ollama-webui</Registry>
+  <Name>open-webui</Name>
+  <Repository>ghcr.io/open-webui/open-webui:main</Repository>
+  <Registry>https://github.com/open-webui/open-webui/pkgs/container/open-webui</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/ollama-webui/ollama-webui/issues</Support>
-  <Project>https://github.com/ollama-webui/ollama-webui</Project>
-  <Overview>ChatGPT-Style Web Interface for Ollama&#xD;
+  <Support>https://github.com/open-webui/open-webui/issues</Support>
+  <Project>https://github.com/open-webui/open-webui</Project>
+  <Overview>(Formerly Ollama WebUI)&#xD;
+ChatGPT-Style Web Interface for various LLM runners, including Ollama and OpenAI-compatible APIs&#xD;
 &#xD;
 IMPORTANT: Make sure to add the following environment variable to your ollama container&#xD;
 - OLLAMA_ORIGINS=*&#xD;
@@ -18,8 +19,8 @@ Set your OpenAI API key (not persistant)&#xD;
 - OPENAI_API_KEY</Overview>
   <Category>Tools: Network:Web</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/ollama-webui.xml</TemplateURL>
-  <Icon>https://github.com/jmorganca/ollama/assets/3325447/56ea1849-1284-4645-8970-956de6e51c3c</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/open-webui.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/open-webui/open-webui/main/static/favicon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

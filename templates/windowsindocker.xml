@@ -9,8 +9,8 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/dockur/windows/issues</Support>
   <Project>https://github.com/dockur/windows</Project>
-  <Overview>Windows in a docker container.&#xD;
-IMPORTANT: Read the readme and especially the FAQ on the github page</Overview>
+  <Overview>Windows inside a Docker container.&#xD;
+IMPORTANT: Does not work with BTRFS filesystems on Unraid. See the FAQ on the Github page for support.</Overview>
   <Category>Other: Network:Web Network:Other</Category>
   <WebUI>http://[IP]:[PORT:8006]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/windowsindocker.xml</TemplateURL>

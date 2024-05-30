@@ -30,6 +30,5 @@ Set your OpenAI API key (not persistant)&#xD;
   <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="OLLAMA_API_BASE_URL" Target="OLLAMA_API_BASE_URL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">http://OLLAMA-IP:11434/api</Config>
   <Config Name="Data" Target="/app/backend/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ollama-webui</Config>
-  <Config Name="OPENAI_API_KEY" Target="" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">OPENAI_API_KEY</Config>
-  <Config Name="OPENAI_API_BASE_URL" Target="" Default="" Mode="" Description="Used if you need to configure another OpenAI API endpoint other than the default one. One example is the Azure OpenAI API endpoint" Type="Variable" Display="always" Required="false" Mask="false">OPENAI_API_BASE_URL</Config>
+  <Config Name="OPENAI_API_KEY" Target="OPENAI_API_KEY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">OPENAI_API_KEY</Config>
 </Container>

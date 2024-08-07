@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ontime</Name>
+  <Repository>getontime/ontime</Repository>
+  <Registry>https://hub.docker.com/r/getontime/ontime</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/cpvalente/ontime/issues</Support>
+  <Project>https://github.com/cpvalente/ontime</Project>
+  <Overview>Ontime is a browser-based application that manages event rundowns, scheduling, and cueing.&#xD;
+With Ontime, you can plan, track your schedule, manage automation and cross-department show information all in one place.
+</Overview>
+  <Category>Tools: Network:Web Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:4001]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/ontime.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/cpvalente/ontime/master/apps/client/src/assets/images/ontime-logo.svg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Config" Target="/data/" Default="/mnt/user/appdata/ontime" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ontime</Config>
+  <Config Name="WebUI" Target="4001" Default="4001" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">4001</Config>
+  <Config Name="OSC input" Target="8888" Default="8888" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">8888</Config>
+  <Config Name="OSC output" Target="9999" Default="9999" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">9999</Config>
+</Container>

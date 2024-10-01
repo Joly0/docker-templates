@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>LiteLLM</Name>
+  <Repository>ghcr.io/berriai/litellm:main-latest</Repository>
+  <Registry>https://github.com/BerriAI/litellm/pkgs/container/litellm</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/BerriAI/litellm/issues</Support>
+  <Project>https://github.com/BerriAI/litellm</Project>
+  <Overview>LiteLLM provides a proxy server to manage auth, loadbalancing, and spend tracking across 100+ LLMs. All in the OpenAI format.</Overview>
+  <Category>AI: Tools: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:4000]/ui</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/litellm.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/BerriAI/litellm/refs/heads/main/ui/litellm-dashboard/src/app/favicon.ico</Icon>
+  <ExtraParams/>
+  <PostArgs>--config /app/config.yaml --detailed_debug</PostArgs>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Requires the config.yaml to be placed manually at the volume location&#xD;
+  Example can be found here:&#xD;
+  https://github.com/BerriAI/litellm/blob/main/proxy_server_config.yaml</Requires>
+  <Config Name="Config" Target="/app" Default="/mnt/user/appdata/litellm" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/litellm/litellm_config.yaml</Config>
+  <Config Name="API/WebUI" Target="4000" Default="4000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">4000</Config>
+</Container>

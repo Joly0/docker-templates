@@ -22,7 +22,6 @@ IMPORTANT: Does not work with BTRFS filesystems on Unraid. See the FAQ on the Gi
   <DonateLink/>
   <Requires/>
   <Config Name="Version" Target="VERSION" Default="" Mode="" Description="https://github.com/dockur/windows?tab=readme-ov-file#how-do-i-select-the-windows-version" Type="Variable" Display="always" Required="false" Mask="false">win11</Config>
-  <Config Name="KVM" Target="" Default="" Mode="" Description="" Type="Device" Display="always" Required="false" Mask="false">/dev/kvm</Config>
   <Config Name="WebUI" Target="8006" Default="8006" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8006</Config>
   <Config Name="RDP" Target="3389" Default="3389" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3389</Config>
   <Config Name="CPU Cores" Target="CPU_CORES" Default="2" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
@@ -30,4 +29,7 @@ IMPORTANT: Does not work with BTRFS filesystems on Unraid. See the FAQ on the Gi
   <Config Name="DISK Size" Target="DISK_SIZE" Default="64G" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">64G</Config>
   <Config Name="Storage" Target="/storage" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/WindowsinDocker/</Config>
   <Config Name="DHCP" Target="DHCP" Default="N" Mode="" Description="Set to Y to enable DHCP (required for custom br0 network)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="KVM" Target="" Default="" Mode="" Description="" Type="Device" Display="advanced" Required="false" Mask="false">/dev/kvm</Config>
+  <Config Name="TUN" Target="" Default="" Mode="" Description="" Type="Device" Display="advanced" Required="false" Mask="false">/dev/net/tun</Config>
+  <Config Name="VHost" Target="" Default="" Mode="" Description="" Type="Device" Display="advanced" Required="false" Mask="false">/dev/vhost-net</Config>
 </Container>

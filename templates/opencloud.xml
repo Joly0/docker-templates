@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>opencloud</Name>
+  <Repository>opencloudeu/opencloud-rolling</Repository>
+  <Registry>https://hub.docker.com/r/opencloudeu/opencloud-rolling</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/opencloud-eu/opencloud/issues</Support>
+  <Project>https://opencloud.eu/</Project>
+  <Overview>Welcome to OpenCloud, your self-hosted file sharing platform: Secure, simple and reliable. &#xD;
+Documentation: https://docs.opencloud.eu/docs/admin/intro&#xD;
+&#xD;
+Before first run: &#xD;
+1. Create the directories with chmod 751&#xD;
+2. Set the owner to the user with UID 1000&#xD;
+</Overview>
+  <Category/>
+  <WebUI>https://[IP]:[PORT:9200]</WebUI>
+  <TemplateURL/>
+  <Icon>https://avatars.githubusercontent.com/u/188916550?s=200&amp;amp;v=4</Icon>
+  <ExtraParams>--entrypoint /bin/sh</ExtraParams>
+  <PostArgs>-c "opencloud init || true; opencloud server"</PostArgs>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Config" Target="/etc/opencloud" Default="/mnt/user/appdata/opencloud/config" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/opencloud/config</Config>
+  <Config Name="Data" Target="/var/lib/opencloud" Default="" Mode="rw" Description="Where OpenCloud stores files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/opencloud/data</Config>
+  <Config Name="WebUI Port" Target="9200" Default="9200" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9200</Config>
+  <Config Name="OpenCloud URL" Target="OC_URL" Default="" Mode="" Description="Address where you access OpenCloud" Type="Variable" Display="always" Required="true" Mask="false">https://opencloud.mydomain.tld</Config>
+  <Config Name="Admin Password" Target="IDM_ADMIN_PASSWORD" Default="" Mode="" Description="Overrides generated administrator password in config." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Allow Basic Auth" Target="OC_INSECURE" Default="true|false" Mode="" Description="Not recommended, but needed for eg. WebDav clients that do not support OpenID Connect" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="SMTP Sender" Target="NOTIFICATIONS_SMTP_SENDER" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SMTP Username" Target="NOTIFICATIONS_SMTP_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SMTP Host" Target="NOTIFICATIONS_SMTP_HOST" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SMTP Port" Target="NOTIFICATIONS_SMTP_PORT" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">587</Config>
+  <Config Name="SMTP Password" Target="NOTIFICATIONS_SMTP_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="SMTP Encryption Type" Target="NOTIFICATIONS_SMTP_ENCRYPTION" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">starttls</Config>
+  <Config Name="Collabora Domain" Target="COLLABORA_DOMAIN" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="OnlyOffice Domain" Target="ONLYOFFICE_DOMAIN" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Additional Services" Target="START_ADDITIONAL_SERVICES" Default="" Mode="" Description="Add any services to the startup list comma separated" Type="Variable" Display="advanced" Required="false" Mask="false">"notifications"</Config>
+  <TailscaleStateDir/>
+</Container>

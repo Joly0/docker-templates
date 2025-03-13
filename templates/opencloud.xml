@@ -31,7 +31,8 @@ Before first run: &#xD;
   <Config Name="WebUI Port" Target="9200" Default="9200" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9200</Config>
   <Config Name="OpenCloud URL" Target="OC_URL" Default="" Mode="" Description="Address where you access OpenCloud" Type="Variable" Display="always" Required="true" Mask="false">https://opencloud.mydomain.tld</Config>
   <Config Name="Admin Password" Target="IDM_ADMIN_PASSWORD" Default="" Mode="" Description="Overrides generated administrator password in config." Type="Variable" Display="always" Required="false" Mask="true"/>
-  <Config Name="Allow Basic Auth" Target="OC_INSECURE" Default="true|false" Mode="" Description="Not recommended, but needed for eg. WebDav clients that do not support OpenID Connect" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="INSECURE" Target="OC_INSECURE" Default="true|false" Mode="" Description="INSECURE: Needed if OpenCloud / Traefik is using self generated certificates" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Allow Basic Auth" Target="PROXY_ENABLE_BASIC_AUTH" Default="true|false" Mode="" Description="Not recommended, but needed for eg. WebDav clients that do not support OpenID Connect" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="SMTP Sender" Target="NOTIFICATIONS_SMTP_SENDER" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="SMTP Username" Target="NOTIFICATIONS_SMTP_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="SMTP Host" Target="NOTIFICATIONS_SMTP_HOST" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>

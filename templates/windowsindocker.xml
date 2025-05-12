@@ -10,7 +10,10 @@
   <Support>https://github.com/dockur/windows/issues</Support>
   <Project>https://github.com/dockur/windows</Project>
   <Overview>Windows inside a Docker container.&#xD;
-IMPORTANT: Does not work with BTRFS filesystems on Unraid. See the FAQ on the Github page for support.</Overview>
+IMPORTANT: Might not work correctly (or at all) with BTRFS filesystems on Unraid. See the FAQ on the Github page for support.&#xD;
+More Information:&#xD;
+https://github.com/dockur/windows/issues/299&#xD;
+https://github.com/dockur/windows/issues/720</Overview>
   <Category>Other: Network:Web Network:Other</Category>
   <WebUI>http://[IP]:[PORT:8006]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/windowsindocker.xml</TemplateURL>
@@ -21,14 +24,23 @@ IMPORTANT: Does not work with BTRFS filesystems on Unraid. See the FAQ on the Gi
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="Version" Target="VERSION" Default="" Mode="" Description="https://github.com/dockur/windows?tab=readme-ov-file#how-do-i-select-the-windows-version" Type="Variable" Display="always" Required="false" Mask="false">win11</Config>
-  <Config Name="WebUI" Target="8006" Default="8006" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8006</Config>
-  <Config Name="RDP" Target="3389" Default="3389" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3389</Config>
+  <Config Name="Version" Target="VERSION" Default="11|11l|11e|10|10l|10e|8e|7u|vu|xp|2k|2025|2022|2019|2016|2012|2008|2003" Mode="" Description="Specify the installed Windows version.&#xD;&#xD;More Information: https://github.com/dockur/windows?tab=readme-ov-file#how-do-i-select-the-windows-version" Type="Variable" Display="always" Required="false" Mask="false">11</Config>
+  <Config Name="WebUI Port" Target="8006" Default="8006" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8006</Config>
+  <Config Name="RDP Port (TCP)" Target="3389" Default="3389" Mode="tcp" Description="" Type="Port" Display="advanced" Required="false" Mask="false">3389</Config>
+  <Config Name="RDP Port (UDP)" Target="3389" Default="3389" Mode="udp" Description="" Type="Port" Display="advanced" Required="false" Mask="false">3389</Config>
+  <Config Name="DHCP" Target="DHCP" Default="N|Y" Mode="" Description="Enable DHCP (is required when using custom network like br0)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Username" Target="USERNAME" Default="" Mode="" Description="Set a custom username (default 'Docker')" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Password" Target="PASSWORD" Default="" Mode="" Description="Set custom password (default 'admin')" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="Language" Target="LANGUAGE" Default="Arabic|Bulgarian|Chinese|Croatian|Czech|Danish|Dutch|English|Estonian|Finnish|French|German|Greek|Hebrew|Hungarian|Italian|Japanese|Korean|Latvian|Lithuanian|Norwegian|Polish|Portuguese|Romanian|Russian|Serbian|Slovak|Slovenian|Spanish|Swedish|Thai|Turkish|Ukrainian" Mode="" Description="Set language for Windows" Type="Variable" Display="always" Required="false" Mask="false">English</Config>
+  <Config Name="Region" Target="REGION" Default="" Mode="" Description="Set region for Windows" Type="Variable" Display="always" Required="false" Mask="false">en-US</Config>
+  <Config Name="Keyboard layout" Target="KEYBOARD" Default="" Mode="" Description="Set keyboard layout for Windows" Type="Variable" Display="always" Required="false" Mask="false">en-US</Config>
+  <Config Name="Server Edition" Target="EDITION" Default="|core" Mode="" Description="Set Edition for Windows Server (only)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Custom Boot ISO" Target="/boot.iso" Default="" Mode="rw" Description="Specify a custom ISO to boot from. Version variable will be ignored" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="CPU Cores" Target="CPU_CORES" Default="2" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
   <Config Name="RAM Size" Target="RAM_SIZE" Default="4G" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">4G</Config>
   <Config Name="DISK Size" Target="DISK_SIZE" Default="64G" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">64G</Config>
   <Config Name="Storage" Target="/storage" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/WindowsinDocker/</Config>
-  <Config Name="DHCP" Target="DHCP" Default="N" Mode="" Description="Set to Y to enable DHCP (required for custom br0 network)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Shared Data" Target="/data" Default="" Mode="rw" Description="Specify a shared folder with the host (appears in file explorer as host.lan).&#xD;&#xD;More Information: https://github.com/dockur/windows?tab=readme-ov-file#how-do-i-share-files-with-the-host" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="KVM" Target="" Default="" Mode="" Description="" Type="Device" Display="advanced" Required="false" Mask="false">/dev/kvm</Config>
   <Config Name="TUN" Target="" Default="" Mode="" Description="" Type="Device" Display="advanced" Required="false" Mask="false">/dev/net/tun</Config>
   <Config Name="VHost" Target="" Default="" Mode="" Description="" Type="Device" Display="advanced" Required="false" Mask="false">/dev/vhost-net</Config>

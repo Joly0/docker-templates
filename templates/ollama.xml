@@ -3,24 +3,70 @@
   <Name>ollama</Name>
   <Repository>ollama/ollama</Repository>
   <Registry>https://hub.docker.com/r/ollama/ollama/</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Use for Nvidia or CPU</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>rocm</Tag>
+    <TagDescription>Use for AMD</TagDescription>
+  </Branch>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://hub.docker.com/r/ollama/ollama/</Support>
   <Project/>
-  <Overview>The easiest way to get up and running with large language models locally.</Overview>
+  <Overview>
+Official Ollama images for Nvidia or AMD GPUs.
+Intel Arc GPUs could potentially work with Vulkan enabled.
+
+NOTE:
+Extra Parameters needed for Nvidia:
+  --gpus=all
+  Additionally you can add a Variable called CUDA_VISIBLE_DEVICES to only use specific Nvidia GPU(s) by ID.
+  Example: 0 or 0,1
+
+Extra Parameters needed for AMD:
+  --device='/dev/kfd' --device='/dev/dri'
+  Additionally you can add a Variable called ROCR_VISIBLE_DEVICES to only use specific AMD GPU(s) by UUID.
+  Example: GPU-67246603a11f0a21 or GPU-XXXXXXX,GPU-YYYYYYY
+
+Docs: https://docs.ollama.com/
+  </Overview>
   <Category>AI: Other:</Category>
   <WebUI>http://[IP]:[PORT:11434]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/ollama.xml</TemplateURL>
   <Icon>https://ollama.ai/public/ollama.png</Icon>
-  <ExtraParams>--gpus=all</ExtraParams>
+  <ExtraParams/>
   <PostArgs/>
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
-  <Config Name="Config" Target="/root/.ollama" Default="/mnt/user/appdata/ollama" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ollama</Config>
-  <Config Name="Web Interface" Target="11434" Default="11434" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">11434</Config>
-  <Config Name="OLLAMA_ORIGINS" Target="OLLAMA_ORIGINS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">*</Config>
+  <Requires>**Nvidia-Driver plugin** (nVidia Support)&amp;amp;#13;&amp;amp;#10;**Radeon-TOP plugin** (AMD Support)</Requires>
+  <Config Name="Data" Target="/root/.ollama" Default="/mnt/user/appdata/ollama" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ollama</Config>
+  <Config Name="API Interface Port" Target="11434" Default="11434" Mode="tcp" Description="Port number where ollama listens on." Type="Port" Display="always" Required="true" Mask="false">11434</Config>
+  <Config Name="OLLAMA_HOST" Target="OLLAMA_HOST" Default="127.0.0.1:11434" Mode="" Description="IP and Port the server binds to, e.g. 0.0.0.0:11434, for network access." Type="Variable" Display="always" Required="true" Mask="false">127.0.0.1:11434</Config>
+  <Config Name="OLLAMA_ORIGINS" Target="OLLAMA_ORIGINS" Default="*" Mode="" Description="Comma-separated list of allowed CORS origins." Type="Variable" Display="always" Required="true" Mask="false">*</Config>
+  <Config Name="OLLAMA_KEEP_ALIVE" Target="OLLAMA_KEEP_ALIVE" Default="5m" Mode="" Description="How long a model stays in VRAM, e.g. 60m or 24h (Set to -1 for infinite, 0 for none)." Type="Variable" Display="always" Required="false" Mask="false">5m</Config>
+  <Config Name="OLLAMA_LOAD_TIMEOUT" Target="OLLAMA_LOAD_TIMEOUT" Default="5m" Mode="" Description="Timeout for stall detection during model loads." Type="Variable" Display="always" Required="false" Mask="false">5m</Config>
+  <Config Name="OLLAMA_NUM_PARALLEL" Target="OLLAMA_NUM_PARALLEL" Default="1" Mode="" Description="Max number of parallel requests a single model can handle." Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="OLLAMA_CONTEXT_LENGTH" Target="OLLAMA_CONTEXT_LENGTH" Default="4096" Mode="" Description="Default context window (tokens) if not specified by the model." Type="Variable" Display="always" Required="false" Mask="false">4096</Config>
+  <Config Name="OLLAMA_KV_CACHE_TYPE" Target="OLLAMA_KV_CACHE_TYPE" Default="f16" Mode="" Description="Quantization type for the K/V cache, e.g. f16, q8_0, q4_0." Type="Variable" Display="always" Required="false" Mask="false">f16</Config>
+  <!-- Advanced settings -->
+  <Config Name="OLLAMA_MODELS" Target="OLLAMA_MODELS" Default="/root/.ollama/models" Mode="" Description="The path where model weights and blobs are stored." Type="Variable" Display="advanced" Required="false" Mask="false">/root/.ollama/models</Config>
+  <Config Name="OLLAMA_MAX_LOADED_MODELS" Target="OLLAMA_MAX_LOADED_MODELS" Default="0" Mode="" Description="Maximum number of models loaded per GPU at once (Set to 0 for infinite)." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+  <Config Name="OLLAMA_MAX_QUEUE" Target="OLLAMA_MAX_QUEUE" Default="512" Mode="" Description="Max requests that can wait in line when the server is busy." Type="Variable" Display="advanced" Required="false" Mask="false">512</Config>
+  <Config Name="OLLAMA_DEBUG" Target="OLLAMA_DEBUG" Default="0" Mode="" Description="Log detail level: 1 (true) for DEBUG, 2 for TRACE." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+  <Config Name="OLLAMA_GPU_OVERHEAD" Target="OLLAMA_GPU_OVERHEAD" Default="0" Mode="" Description="Reserved VRAM (in bytes) to leave empty on each GPU." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+  <Config Name="OLLAMA_FLASH_ATTENTION" Target="OLLAMA_FLASH_ATTENTION" Default="false|true" Mode="" Description="Enables experimental Flash Attention optimizations." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="OLLAMA_SCHED_SPREAD" Target="OLLAMA_SCHED_SPREAD" Default="false|true" Mode="" Description="If true, always spreads model layers across all visible GPUs." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="OLLAMA_MULTIUSER_CACHE" Target="OLLAMA_MULTIUSER_CACHE" Default="false|true" Mode="" Description="Optimizes prompt caching when multiple users share a model." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="OLLAMA_NOPRUNE" Target="OLLAMA_NOPRUNE" Default="false|true" Mode="" Description="If true, does not delete unused model blobs on startup." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="OLLAMA_NOHISTORY" Target="OLLAMA_NOHISTORY" Default="false|true" Mode="" Description="Disables the readline history in the interactive CLI." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="OLLAMA_NEW_ENGINE" Target="OLLAMA_NEW_ENGINE" Default="false|true" Mode="" Description="Enables the experimental new Ollama engine." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="OLLAMA_VULKAN" Target="OLLAMA_VULKAN" Default="false|true" Mode="" Description="Enables experimental Vulkan hardware acceleration." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="HTTP_PROXY" Target="HTTP_PROXY" Default="" Mode="" Description="Proxy for downloading models over HTTP." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="HTTPS_PROXY" Target="HTTPS_PROXY" Default="" Mode="" Description="Proxy for downloading models over HTTPS." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="NO_PROXY" Target="NO_PROXY" Default="" Mode="" Description="Comma-separate list of hosts/IPs that bypass the proxy." Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>

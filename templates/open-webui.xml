@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>open-webui</Name>
-  <Repository>ghcr.io/open-webui/open-webui</Repository>
+  <Repository>ghcr.io/open-webui/open-webui:main</Repository>
   <Registry>https://github.com/open-webui/open-webui/pkgs/container/open-webui</Registry>
   <Branch>
-    <Tag>latest</Tag>
+    <Tag>main</Tag>
     <TagDescription>Standard container</TagDescription>
   </Branch>
   <Branch>
     <Tag>slim</Tag>
-    <TagDescription>Exclude the pre-bundled models</TagDescription>
+    <TagDescription>For environments with limited storage or bandwidth, Open WebUI offers slim image variants that exclude pre-bundled models. These images are significantly smaller but download required models (whisper, embedding models) on first use.</TagDescription>
   </Branch>
   <Network>bridge</Network>
   <MyIP/>
@@ -37,6 +37,7 @@ Set your OpenAI API key (not persistant)&#xD;
   <Requires/>
   <Config Name="Data" Target="/app/backend/data" Default="/mnt/user/appdata/open-webui" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/open-webui</Config>
   <Config Name="WebUI Port" Target="8080" Default="8080" Mode="tcp" Description="Sets the port to run Open WebUI from." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="WEBUI_SECRET_KEY" Target="WEBUI_SECRET_KEY" Default="" Mode="" Description="You MUST set WEBUI_SECRET_KEY to a secure, persistent value. Example command: openssl rand -base64 48" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="ENABLE_OLLAMA_API" Target="ENABLE_OLLAMA_API" Default="true|false" Mode="" Description="Enables the use of Ollama APIs." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="OLLAMA_BASE_URL" Target="OLLAMA_BASE_URL" Default="http://localhost:11434" Mode="" Description="Configures the Ollama backend URL." Type="Variable" Display="always" Required="false" Mask="false">http://localhost:11434</Config>
   <Config Name="ENABLE_OPENAI_API" Target="ENABLE_OPENAI_API" Default="true|false" Mode="" Description="Enables the use of OpenAI APIs." Type="Variable" Display="always" Required="false" Mask="false"/>

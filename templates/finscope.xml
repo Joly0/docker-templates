@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>finscope</Name>
+  <Repository>ghcr.io/netz-sg/finscope:latest</Repository>
+  <Registry>https://github.com/netz-sg/finscope/pkgs/container/finscope</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/netz-sg/finscope/issues</Support>
+  <Project>https://github.com/netz-sg/finscope</Project>
+  <ReadMe/>
+  <Overview>A monitoring and analytics dashboard for Jellyfin. Keep an eye on active streams, user activity, library stats, and server health -- all in one place, with a glass-morphism UI inspired by Apple's Spatial Design.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/finscope.xml</TemplateURL>
+  <Icon>https://github.com/netz-sg/finscope/blob/main/icon_finscope.png?raw=true</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Jellyfin</Requires>
+  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">4687</Config>
+  <Config Name="Data path" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/finscope</Config>
+  <Config Name="Database path variable" Target="DB_PATH" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">/data/finscope.db</Config>
+  <TailscaleStateDir/>
+</Container>

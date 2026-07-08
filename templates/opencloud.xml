@@ -9,6 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/opencloud-eu/opencloud/issues</Support>
   <Project>https://opencloud.eu/</Project>
+  <Deprecated>true</Deprecated>
   <Overview>Welcome to OpenCloud, your self-hosted file sharing platform: Secure, simple and reliable. &#xD;
 Documentation: https://docs.opencloud.eu/docs/admin/intro&#xD;
 &#xD;

@@ -6,7 +6,7 @@
   <Support>https://github.com/Joly0/unraid-pangolin_cli/issues</Support>
   <Project>https://github.com/Joly0/unraid-pangolin_cli</Project>
   <ReadMe>https://github.com/Joly0/unraid-pangolin_cli/blob/main/README.md</ReadMe>
-  <Category></Category><Category>Tools:System: Network:Management:</Category>
+  <Category>Tools:System: Network:Management:</Category>
   <Beta>false</Beta>
   <MinVer>7.0</MinVer>
   <Deprecated>false</Deprecated>

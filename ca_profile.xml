@@ -4,9 +4,9 @@
     Just doing random stuff :D
   </Profile>
   <!-- Optional icon -->
-  <Icon>https://raw.githubusercontent.com/Joly0/unraid-templates/refs/heads/main/avatar.png</Icon>
+  <Icon>https://raw.githubusercontent.com/Joly0/docker-templates/refs/heads/main/avatar.png</Icon>
   <!-- Optional web page -->
-  <WebPage>https://github.com/Joly0/unraid-templates</WebPage>
+  <WebPage>https://github.com/Joly0/docker-templates</WebPage>
   <!-- Optional donation link -->
   <DonateLink>https://github.com/sponsors/Joly0</DonateLink>
 </CommunityApplications>

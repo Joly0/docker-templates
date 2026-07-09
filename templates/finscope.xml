@@ -11,7 +11,7 @@
   <Project>https://github.com/netz-sg/finscope</Project>
   <ReadMe/>
   <Overview>A monitoring and analytics dashboard for Jellyfin. Keep an eye on active streams, user activity, library stats, and server health -- all in one place, with a glass-morphism UI inspired by Apple's Spatial Design.</Overview>
-  <Category/>
+  <Category>Tools: Network:Web</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Joly0/docker-templates/main/templates/finscope.xml</TemplateURL>
   <Icon>https://github.com/netz-sg/finscope/blob/main/icon_finscope.png?raw=true</Icon>

@@ -9,7 +9,6 @@
   <Category></Category><Category>Tools:System: Network:Management:</Category>
   <Beta>false</Beta>
   <MinVer>7.0</MinVer>
-  <MaxVer>7.3</MaxVer>
   <Deprecated>false</Deprecated>
   <Icon>https://raw.githubusercontent.com/Joly0/unraid-pangolin_cli/refs/heads/main/source/usr/local/emhttp/plugins/pangolin_cli/pangolin_cli.png</Icon>
   <License>AGPLv3</License>

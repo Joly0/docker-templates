@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Name>Pangolin CLI</Name>
+  <Description>Pangolin CLI to connect your Unraid Server to your Pangolin Instance. This is not Newt!</Description>
+  <PluginURL>https://raw.githubusercontent.com/Joly0/unraid-pangolin_cli/refs/heads/main/pangolin_cli.plg</PluginURL>
+  <PluginAuthor>Joly0</PluginAuthor>
+  <Support>https://forums.unraid.net/topic/199839-plugin-pangolin-cli/</Support>
+  <Project>https://github.com/Joly0/unraid-pangolin_cli</Project>
+  <ReadMe>https://github.com/Joly0/unraid-pangolin_cli/blob/main/README.md</ReadMe>
+  <Category>Tools:System Network:Management</Category>
+  <Beta>false</Beta>
+  <MinVer>7.0</MinVer>
+  <Deprecated>false</Deprecated>
+  <Icon>https://raw.githubusercontent.com/Joly0/unraid-pangolin_cli/refs/heads/main/source/usr/local/emhttp/plugins/pangolin_cli/pangolin_cli.png</Icon>
+  <License>AGPLv3</License>
+  <Plugin>True</Plugin>
+</Containers>
